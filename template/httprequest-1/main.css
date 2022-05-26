@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #282c34;
+    color: #f1ffdf;
+    width: 100%;
+}
+
+div {
+    width: 50%;
+    margin: 50px auto;
+}
+button{
+    padding: 5px;
+    background-color: brown;
+    color: chartreuse;
+    font-weight: bold;
+    outline: none;
+}
+table {
+    margin-top: 10px;
+    width: 100%;
+}
+th,
+td {
+    border: 1px solid red;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+/* .bg1 {
+    background: url("https://picsum.photos/1000");
+}
+
+.bg2 {
+    background: url("https://picsum.photos/1000?random1");
+    color: #333;
+} */

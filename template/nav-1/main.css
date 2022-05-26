@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+* {
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #282c34;
+    color: #f3ffff;
+    width: 100%;
+}
+.menu {
+    background-color: #eee;
+    border-radius: 10px;
+    width: 60%;
+    margin: 50px auto;
+}
+.menu > ul {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding-left: 15px;
+}
+.menu > ul > li > a {
+    display: block;
+    color: brown;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 15px;
+    border-radius: 40px;
+}
+.menu > ul > li[data-dropdown] > a::after {
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 5px;
+    color: #999;
+    transition: 300ms all;
+    display: inline-block;
+}
+
+.menu ul .dropdown::before {
+    content: "";
+    border: 8px solid transparent;
+    border-bottom-color: #f5f5f5;
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    margin-left: -12px;
+}
+.menu ul .dropdown .dropdown::before {
+    border-bottom-color: transparent;
+    border-right-color: #f5f5f5;
+    left: 3px;
+    top: 10px;
+    margin-left: 0;
+}
+.menu > ul > li {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.menu ul .dropdown {
+    left: 50%;
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    padding-top: 10px;
+    margin-left: -100px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms all;
+    transform: scale(0);
+}
+
+.menu ul .dropdown ul {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+.menu ul .dropdown ul li a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 15px;
+    line-height: 34px;
+    color: #555;
+    border-radius: 34px;
+}
+.menu ul .dropdown ul li {
+    position: relative;
+    padding: 0 7px;
+}
+
+.menu ul .dropdown .dropdown {
+    position: absolute;
+    top: 0px;
+    left: 190px;
+    margin-left: 0px;
+    padding-left: 18px;
+    padding-top: 0;
+}
+
+.menu ul .dropdown ul li:hover > a {
+    background-color: white;
+    color: black;
+}
+.menu > ul > li:hover > a + .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.menu > ul > li:hover > a {
+    background-color: #fff;
+}
+.menu ul .dropdown li[data-dropdown]:hover > a::after {
+    transform: rotate(180deg);
+}
+
+.menu ul .dropdown ul li:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.menu > ul > li:hover > a::after {
+    transform: rotate(180deg);
+}
+.menu ul .dropdown li[data-dropdown] > a::after {
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 15px;
+    color: #999;
+    display: inline-block;
+    transition: 300ms all;
+}
